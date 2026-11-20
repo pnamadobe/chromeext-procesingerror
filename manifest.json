@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Adobe Processing Error Badges",
+  "version": "1.1.0",
+  "description": "Hides Processing Error (and other configurable) badges in Adobe Experience Manager Assets.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Hide AEM Badges",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://experience.adobe.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
